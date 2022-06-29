@@ -1,0 +1,384 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "03772dd3-3a5e-439d-928d-322b6771eacc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 1, 4, 3, 1, 2, 3, 2, 1, 3, 6]"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = [1, 2, 1, 4, 3, 1, 2, 3, 2, 1, 3, 6]\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "e1f5dddd-9007-4a0a-9454-e87781d93ea1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{1, 2, 3, 4, 6}"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set(a) #중복데이터를 사라지게 한다"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "77eaf310-a736-485f-9d4a-a311f52a48af",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def add(a, b):\n",
+    "    return a, b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "d29f41d3-7dc9-4211-8851-35e23805c96a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2)"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add(1, 2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "bffe0a2c-99ca-4f12-8864-553289967eec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def add(a = 1, b = 1):\n",
+    "    return a / b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "f204f7c7-4267-42c0-a125-b5922164f4a6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.6666666666666667"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add(b = 3, a = 5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "54165337-4e33-4ea7-bf18-60a3818522c2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.6"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add(3, 5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "3cc27fba-6d19-401f-9492-de2f4fc87e61",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.0"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "c8674b08-c20c-4cc6-bd82-603a6e7f8f76",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def add_many(*args):\n",
+    "    print(args)\n",
+    "    result = 0\n",
+    "    for i in args:\n",
+    "        result = result + i\n",
+    "    return result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "787a36c1-26da-4e6a-84cf-3b8eb8f762ea",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "55"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add_many(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "b21fdcd0-73db-4ced-b452-f0972941ca5a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def add_mul(*args, choice = 'add'):\n",
+    "    if choice == \"add\":\n",
+    "        result = 0\n",
+    "        for i in args:\n",
+    "            result = result + i\n",
+    "    elif choice == \"mul\":\n",
+    "        result = 1\n",
+    "        for i in args:\n",
+    "            result = result * i\n",
+    "    return result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "a3de22d9-ec70-470b-be95-e776c23aefa1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "432"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "add_mul(1, 1, 2, 3, 2, 3, 2, 3, 2, choice = 'mul')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "eeb07e23-f0e8-4c26-9431-7c47fdb4214e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 정규표현식 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "2c92660e-bfa9-47b9-a245-beab0a002989",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import re"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "8cc79cba-9460-4a52-8a40-9b4400f046b4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<re.Match object; span=(0, 6), match='python'>"
+      ]
+     },
+     "execution_count": 51,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p = re.compile('[a-z]+')\n",
+    "m = p.match('python1python')\n",
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "3e8ff64d-ee5c-49ab-859d-2297064141ad",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<re.Match object; span=(1, 6), match='ython'>"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p = re.compile('[a-z]+')\n",
+    "m = p.search('Python1python')\n",
+    "m"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "0dd12036-8704-45bd-b7c5-ea7f6d2661f3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['life', 'is', 'too', 'short']"
+      ]
+     },
+     "execution_count": 52,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "result = p.findall(\"life is too short\")\n",
+    "result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "dcd22a31-ac4f-4e2a-a355-0ac09c58e427",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "이메일 >>> dfasdf1212@navar.com\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "<re.Match object; span=(0, 20), match='dfasdf1212@navar.com'>"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "p = re.compile('[a-z][a-z0-9]{4,}@[a-z]{2,}[.](kr|com|org|net)$') #[a-z0-9]{4,}가 5자리이상이 되어야 한다 / [a-z]{2,}가 3자리 이상이 되어야 한다\n",
+    "email = input('이메일 >>>')\n",
+    "result = p.match(email)\n",
+    "result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "194c02fe-fbfc-4c46-986f-257f0b74770b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
