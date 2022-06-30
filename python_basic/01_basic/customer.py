@@ -52,7 +52,8 @@
 # - 맨 처음 while 반복문을 나간다 -> break
 
 import re
-custlist = [{'name' : '홍길동', 'gender' : 'M', 'email' : 'hong1212@naver.com', 'birth' : '1998'},
+custlist = [
+            {'name' : '홍길동', 'gender' : 'M', 'email' : 'hong1212@naver.com', 'birth' : '1998'},
             {'name' : '김나리', 'gender' : 'F', 'email' : 'narii212@naver.com', 'birth' : '1999'},
             {'name' : '김면발', 'gender' : 'M', 'email' : 'tengteng@naver.com', 'birth' : '1990'}
             ]

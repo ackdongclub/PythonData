@@ -1,0 +1,709 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "3f2ee906-a831-4214-aed4-a61001d6b8de",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class FourCal:\n",
+    "    def setdata(self,first,second): #매개변수/지역변수\n",
+    "        self.first = first #인스턴스 변수\n",
+    "        self.second = second #인스턴스 변수\n",
+    "        \n",
+    "    def add(self):\n",
+    "        result = self.first + self.second\n",
+    "        return result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "5c3d8bd8-5eee-4d39-b9d4-18e7b47a5156",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = FourCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "704f1b17-cbd3-411c-9f30-ea804a9aaa0e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "__main__.FourCal"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "fae8e528-dbe1-48f2-9b77-f8191d75b7ec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a.setdata(2,5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "6a5898e4-98a1-4c06-beb6-4668fa0c98bf",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "42a04d7a-77aa-4b66-ba0a-59015761a28e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "4506cdbe-b584-4749-b935-6696ff6f43a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a.first = 6"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 45,
+   "id": "af35637f-0a19-4222-b734-bd5545c42a15",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 45,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "b509ec38-ae3a-453f-8ebd-593fa7778392",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b = FourCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "52b08a9f-8156-40d3-92c4-3eba498a20dd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b.setdata(9,9)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "61ee052c-bc48-4448-a531-ceda2344eeb6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 50,
+   "id": "f9f31914-b6d1-4c98-b792-10d5ecf8c619",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 50,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "cc2cbb2c-e279-4deb-b4e8-76ffa8301ebd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<__main__.FourCal at 0x7fc4c9f75400>"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "6837d415-1f2e-4a26-94fb-e2054ea93848",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a.setdata(4, 8)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 56,
+   "id": "2282bbf0-33f0-4ca3-be08-c89565e2095e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 56,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "d6d4251a-9e2a-4a37-9fdb-e31bc484c9ea",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "result = a.add()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "93ea795c-9653-466f-86e8-22a9d7124365",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "13d90ae4-d19c-44e4-b2e3-12e5f81e2e18",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class FourCal:\n",
+    "    def setdata(self,first=0,second=0): #매개변수/지역변수\n",
+    "        self.first = first #인스턴스 변수\n",
+    "        self.second = second #인스턴스 변수\n",
+    "        \n",
+    "    def add(self):\n",
+    "        result = self.first + self.second\n",
+    "        return result\n",
+    "    \n",
+    "    def __init__(self,first=0,second=0):\n",
+    "        self.first = first\n",
+    "        self.second = second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "576d6d3a-b8f4-4770-86b6-31f70a81afdc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = FourCal(0,0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "034ac158-f9fe-41f2-9097-05006e43ed26",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "dd07392e-4727-461a-8fd7-fd45541c5b42",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "0e37c40a-3b97-4df2-992b-2327eacb8de2",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "b = FourCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "c7d5e47b-9562-441c-8b4a-c3af91ad0f44",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "aaf5ad9a-fbf0-4375-b334-193a2968c74f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "c888c95a-53a1-4663-91a5-72d97c3c1ccd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c = FourCal(5)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "d62f79fe-8d24-4eeb-ad91-5a1d2545e35f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "7d10c5da-0854-452a-8957-e0071432157e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "8cd9c6e8-fcc1-43df-bbae-e08c318ffd4e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "d = FourCal(second=7)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "b9204da4-089f-4c21-942d-aa6d32a320dd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "144bb940-0bed-4862-9334-a2991bf1502a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "9bbd2483-6b7a-46da-92bc-433e4d142e66",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class PrintFourCal:\n",
+    "    def data_print(self):\n",
+    "        print('data')\n",
+    "        \n",
+    "class MoreFourCal(FourCal, PrintFourCal):\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "8bcd342a-bf5d-4c24-892c-e8dcc85a4e73",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "call = MoreFourCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "6d6baf49-beea-4af0-b72e-345ef50ac6ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "call.first"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "97a810e6-0071-401c-b73c-49c40c9850a4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "call.second"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "c6cf22cb-c372-4092-b5c5-a5a403b00816",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<bound method PrintFourCal.data_print of <__main__.MoreFourCal object at 0x7fa0198365e0>>"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "call.data_print"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "0fce792d-adbf-4561-948e-ad45a69862e0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class OverCal(FourCal):\n",
+    "    def add(self,first=9,second=9):\n",
+    "        print('add')\n",
+    "        self.first = first\n",
+    "        self.second = second\n",
+    "        return self.first + self.second\n",
+    "    def lastname(self):\n",
+    "        print('김')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "7a2ab951-1f2e-4030-a260-2dcfa37a7276",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c = OverCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "7e86482e-ff02-47ce-9bae-ca6c4ca96aec",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "add\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "18"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "c.add()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "973a8af9-46f0-4446-af59-5c1afa148f45",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c1 = OverCal()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "2692ffc6-9041-4907-8bbf-e0e74fa3b2a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "김\n"
+     ]
+    }
+   ],
+   "source": [
+    "c1.lastname()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "462a544c-bf89-44eb-9692-b81a6997fc33",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
