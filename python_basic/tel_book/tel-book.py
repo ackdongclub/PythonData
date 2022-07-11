@@ -28,9 +28,8 @@ while True:
             break
     elif menu == '2':
         tb.search_telBook()
-        
     elif menu == '3':
-        pass
+        tb.update_telBook()
     elif menu == '4':
         pass
     elif menu == '5':

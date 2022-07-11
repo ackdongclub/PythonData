@@ -35,8 +35,8 @@ def create_table2():
 def insert_telBook():
     conn = sqlite3.connect('python_basic/tel_book/tel_book.db')
     cur = conn.cursor()
-    name = input('이름을 입력하세요 >>>')
     tel = input('전화번호를 입력하세요 >>>')
+    name = input('이름을 입력하세요 >>>')
     info = input('전화번호의 정보를 입력하세요 >>>')
     recommend = 0
     loginName = input('작성자 아이디를 입력하세요 >>>')
@@ -64,10 +64,25 @@ def search_telBook():
     conn.close()
 
 def update_telBook():
-    pass
-    # conn = sqlite3.connect('python_basic/tel_book/tel_book.db')
-    # cur = conn.cursor()
-    # loginName = input('작성자 아이디를 입력하세요 >>>')
+    conn = sqlite3.connect('python_basic/tel_book/tel_book.db')
+    cur = conn.cursor()
+    loginId = input('작성자 아이디를 입력하세요 >>>')
+    removeNum = input('비밀번호를 입력하세요 >>>')
+    sql = f'select * from users t1, telBooks t2 where t1.loginID = t2.loginID and t1.passWord = ?'
+    cur.execute(sql, (removeNum,))
+    if sql is None:
+        print('입력이 틀렸습니다 다시 입력해 주세요')
+        update_telBook()
+    else:
+        updateTel = input('삭제할 수정할 전화번호를 입력하세요 >>>')
+        col = input('변경할 카테고리를 선택하세요 (name, tel, info) >>>')
+        value = input('변경 내용을 입력하세요 >>>')
+        sql2 = f'update telBooks set {col} = ? where tel = ?'
+        cur.execute(sql2, (updateTel, value))
+        print('\n성공적으로 변경되었습니다\n')
+    conn.commit()
+    conn.close()
+
 
 
 
@@ -91,11 +106,10 @@ def login_telBook():
     conn = conn = sqlite3.connect('python_basic/tel_book/tel_book.db')
     cur = conn.cursor()
     loginId = input('아이디를 입력해주세요 >>>')
-    loginPass = input('비밀번호를 입력하세요 >>>')
-    sql = f'select loginID from users where loginID = ? and passWord = ?'
-    data = loginId, loginPass
-    cur.execute(sql, data)
-    if sql is loginId:
+    #loginPass = input('비밀번호를 입력하세요 >>>')
+    sql = f'select * from users'
+    cur.execute(sql, )
+    if sql in loginId:
         print('\n로그인 성공😆\n')
         insert_telBook()
     else:
