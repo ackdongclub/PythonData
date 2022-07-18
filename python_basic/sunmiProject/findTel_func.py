@@ -64,7 +64,7 @@ def search_telNumber():
     else:
         for item in data2:
             print('==================================================================')
-            print(f'\n검색하신 {tel}은 \n 이름 : {item[1]} \n 상세설명 : {item[2]}입니다.')
+            print(f'\n검색하신 {tel}은 \n이름 : {item[1]} \n상세설명 : {item[2]}입니다.')
             print('==================================================================')
             conn.close()
 
@@ -95,8 +95,7 @@ def delete_telNumber():
     if data is None:
         print('*********************\n 삭제할 대상이 없습니다 \n*********************')
     else:
-        value = input('삭제할 번호를 한번 더 입력하세요 >>>')
-        cur.execute(f'delete from telBooks where tel = ?', (value, ))
+        cur.execute(f'delete from telBooks where tel = ?', (tel, ))
         print('\n 🎉삭제가 완료되었습니다🎉 \n')
         conn.commit()
         conn.close()
